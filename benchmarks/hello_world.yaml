@@ -1,0 +1,10 @@
+name: hello_world
+metric: exact_match
+threshold: 1.0
+cases:
+  - id: case_1
+    input: hello
+    expected: hello
+  - id: case_2
+    input: world
+    expected: world
