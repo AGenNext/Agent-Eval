@@ -1,0 +1,30 @@
+[project]
+name = "agent-eval"
+version = "0.1.0"
+description = "Enterprise agent evaluation platform implementing the CLEAR framework."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.111.0",
+  "uvicorn>=0.30.0",
+  "pydantic>=2.7.0",
+  "pyyaml>=6.0.1",
+  "typer>=0.12.3",
+  "rich>=13.7.1"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.2.0",
+  "ruff>=0.5.0"
+]
+
+[project.scripts]
+agent-eval = "agent_eval.cli:app"
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
